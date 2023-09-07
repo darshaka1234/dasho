@@ -28,6 +28,7 @@ namespace dasho.Controllers
             if(ModelState.IsValid) { 
             _db.Categories.Add(obj);
             _db.SaveChanges();
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
            return View(obj);
@@ -55,29 +56,37 @@ namespace dasho.Controllers
             {
                 _db.Categories.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
         }
-
-        [HttpPost]
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
             {
                 return NotFound();
             }
+            Category? categoryFromDb = _db.Categories.FirstOrDefault(c => c.Id == id);
 
-            Category? category = _db.Categories.FirstOrDefault(c => c.Id == id);
-            if (category == null)
+            if (categoryFromDb == null)
             {
                 return NotFound();
             }
-
-            _db.Categories.Remove(category);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
-            
+            return View(categoryFromDb);
+        }
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeletePOST(int? id)
+        {
+            Category? obj = _db.Categories.FirstOrDefault(c => c.Id == id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            _db.Categories.Remove(obj);
+            _db.SaveChanges();
+            TempData["success"] = "Category deleted successfully";
+            return RedirectToAction("Index");
         }
     }
 }
