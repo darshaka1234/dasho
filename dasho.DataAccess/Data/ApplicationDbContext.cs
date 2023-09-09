@@ -1,7 +1,7 @@
 ﻿using dasho.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace dasho.Data
+namespace dasho.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {
@@ -16,6 +16,5 @@ namespace dasho.Data
                 new Category { Id = 2, Name = "Comedy", DisplayOrder = 2 }, 
                 new Category { Id = 3, Name = "Triller", DisplayOrder = 3 });
         }
-     
     }
 }

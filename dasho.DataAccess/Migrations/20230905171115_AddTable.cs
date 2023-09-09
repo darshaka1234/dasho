@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace dasho.Migrations
+namespace dasho.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddTable : Migration
