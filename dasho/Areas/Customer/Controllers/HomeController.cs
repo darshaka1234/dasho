@@ -2,8 +2,9 @@ using dasho.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace dasho.Controllers
+namespace dasho.Areas.Customer.Controllers
 {
+    [Area("Customer")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
