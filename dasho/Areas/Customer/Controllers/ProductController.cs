@@ -1,5 +1,4 @@
-﻿using dasho.Areas.Customer.Models;
-using dasho.DataAccess.Data;
+﻿using dasho.DataAccess.Data;
 using dasho.DataAccess.Repository.IRepository;
 using dasho.Models;
 using Microsoft.AspNetCore.Mvc;

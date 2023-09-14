@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using dasho.DataAccess.Repository.IRepository;
 using dasho.DataAccess.Data;
-using dasho.Areas.Customer.Models;
 using dasho.Models;
 
 namespace dasho.DataAccess.Repository

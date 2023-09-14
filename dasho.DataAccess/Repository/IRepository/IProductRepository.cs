@@ -1,4 +1,4 @@
-﻿using dasho.Areas.Customer.Models;
+﻿
 using dasho.Models;
 using dasho.Repository.IRepository;
 using System;

@@ -1,4 +1,4 @@
-﻿using dasho.Areas.Customer.Models;
+﻿
 using dasho.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,7 +10,7 @@ namespace dasho.DataAccess.Data
 
         public DbSet<Category> Categories { get; set; }
 
-        public DbSet<Product> Prodcts { get; set; }
+        public DbSet<Product> Products { get; set; }
 
         protected override void OnModelCreating (ModelBuilder modelBuilder)
         {
