@@ -5,7 +5,7 @@ namespace dasho.Areas.Customer.Models
     public class Product
     {
         [Key]
-        public int ID { get; set; }
+        public int Id { get; set; }
         [Required]
         public string Title { get; set; }
        
