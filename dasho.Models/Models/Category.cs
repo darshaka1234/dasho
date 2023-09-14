@@ -17,8 +17,5 @@ namespace dasho.Models
         [DisplayName("Display Order")]
         public int DisplayOrder { get; set; }
 
-
-
-
     }
 }

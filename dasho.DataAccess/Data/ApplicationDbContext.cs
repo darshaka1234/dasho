@@ -18,8 +18,8 @@ namespace dasho.DataAccess.Data
                 new Category { Id = 1, Name = "Action", DisplayOrder = 1 }, 
                 new Category { Id = 2, Name = "Comedy", DisplayOrder = 2 }, 
                 new Category { Id = 3, Name = "Triller", DisplayOrder = 3 });
-
-            modelBuilder.Entity<Product>().HasData(
+        
+        modelBuilder.Entity<Product>().HasData(
                 new Product
                 {
                     Id = 1,

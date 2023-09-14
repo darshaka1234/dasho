@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
-namespace dasho.Areas.Customer.Models
+namespace dasho.Models
 {
     public class Product
     {
